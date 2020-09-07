@@ -1,6 +1,6 @@
 # FlashChat
 
-![Frontend build](https://github.com/tusharmoraye/flashchat/workflows/Deploy%20to%20GitHub%20Pages(Frontend)/badge.svg)
+![Frontend build](https://github.com/tusharmoraye/flashchat/workflows/Deploy%20to%20GitHub%20Pages%20(Frontend)/badge.svg)
 ![Backend build](https://github.com/tusharmoraye/flashchat/workflows/Deploy%20to%20Heroku%20(Backend)/badge.svg)
 
 ## Running development server
