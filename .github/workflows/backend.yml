@@ -18,7 +18,7 @@ jobs:
       - name: Stage changes 
         run: git add .
       - name: Commit yarn.lock file
-        run: git commit -m "Add yarn.lock file"
+        run: git commit --author="Tushar Moraye <tusharmoraye@gmail.com>" -m "Add yarn.lock file"
       - name: Add server remote origin
         run: git remote add heroku-server https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/${{ secrets.HEROKU_SERVER_APP_NAME }}.git
       - name: Deploy server to Heroku
