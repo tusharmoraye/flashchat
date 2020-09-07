@@ -5,8 +5,8 @@
   "scripts": {
     "build": "rimraf dist & tsc --build tsconfig.prod.json",
     "lint": "tslint --project \"tsconfig.json\"",
-    "start": "node ./dist --env=production",
-    "start:dev": "nodemon",
+    "start": "node ./dist",
+    "dev": "tsc-watch --onSuccess \"yarn start\"",
     "test": "nodemon --config ./spec/nodemon.json"
   },
   "nodemonConfig": {
@@ -27,8 +27,12 @@
     "nodemon": "^2.0.4",
     "rimraf": "^3.0.2",
     "ts-node": "^8.10.2",
+    "tsc-watch": "^4.2.9",
     "tsconfig-paths": "^3.9.0",
     "tslint": "^6.1.2",
     "typescript": "^3.9.7"
+  },
+  "engines": {
+    "yarn": "1.22.5"
   }
 }

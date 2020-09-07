@@ -1,11 +1,9 @@
 import { Router } from 'express';
-import UserRouter from './users';
+import V1Router from './v1';
 
-// Init router and path
 const router = Router();
 
-// Add sub-routes
-router.use('/users', UserRouter);
+// router.get('/v1', (req, res) => res.json({ message: 'OK' }))
+router.use('/v1', V1Router);
 
-// Export the base-router
 export default router;
