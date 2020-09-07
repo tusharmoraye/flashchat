@@ -15,10 +15,12 @@ jobs:
       - uses: actions/checkout@v2
       - name: Copy yarn.lock file to packages/server 
         run: cp yarn.lock packages/server/
-      - name: Stage changes 
-        run: git add .
       - name: Commit yarn.lock file
-        run: git commit --author="Tushar Moraye <tusharmoraye@gmail.com>" -m "Add yarn.lock file"
+        run: |
+          git config --global user.email "tusharmoraye@gmail.com"
+          git config --global user.name "Tushar Moraye"
+          git add .
+          git commit -m "Add yarn.lock file"
       - name: Add server remote origin
         run: git remote add heroku-server https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/${{ secrets.HEROKU_SERVER_APP_NAME }}.git
       - name: Deploy server to Heroku
