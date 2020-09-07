@@ -1,5 +1,8 @@
 # FlashChat
 
+![Frontend build](https://github.com/tusharmoraye/flashchat/workflows/Deploy%20to%20GitHub%20Pages(Frontend)/badge.svg)
+![Backend build](https://github.com/tusharmoraye/flashchat/workflows/Deploy%20to%20Heroku%20(Backend)/badge.svg)
+
 ## Running development server
 
 ```bash
@@ -7,9 +10,9 @@ cd flashchat
 yarn install
 npm run build
 cd packages/server
-npm run start:dev
+yarn dev
 cd packages/web
-npm run start
+yarn start
 ```
 
 ## Running production build
@@ -17,10 +20,10 @@ npm run start
 ```bash
 cd flashchat
 yarn install
-npm run build
 cd packages/server
-npm run start
+yarn build
+yarn start
 cd packages/web
-npm run build
-npm run start:prod
+yarn build
+yarn start:prod
 ```
